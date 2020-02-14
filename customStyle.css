@@ -13,6 +13,22 @@ body {
 
 }
 
+.stemwijzer-main {
+    background-color: white;
+    height: 700px;
+    margin-top: 100px;
+}
+
+.stemwijzer-stelling {
+    margin: 40px 10% 0 10%;
+    padding: 0;
+    width: 880px;
+}
+
+.stemwijzer-buttons {
+
+}
+
 .links {
     background-color: white;
     height: 98.5%;
@@ -43,8 +59,46 @@ body {
     left: 40px;
 }
 
-.footer {
+.button-start {
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 50px;
+}
 
+.button-stelling {
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.button-stelling-gvb {
+    width: 240px;
+    height: 60px;
+    font-size: 30px;
+    padding: 0 8px 0 8px;
+}
+
+.button-stelling-skip {
+    margin-left: 50px;
+}
+
+.button-terug {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 15px;
+    padding-left: 12px;
+}
+
+.stelling-txt {
+    font-size: 36px;
+    /*width: 850px;*/
+}
+
+.stelling-titel {
+    color: #01B4DC;
 }
 
 .footer-img {
