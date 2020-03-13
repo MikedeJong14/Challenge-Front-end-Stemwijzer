@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="customStyle.css">
 </head>
-<body>
+<body onload="startStemwijzer()">
     <div class="container main">
         <div class="container rounded stemwijzer-main">
-            <a class="btn btn-secondary btn-lg rounded-circle button-terug" href="index.html"><-</a>
+            <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
             <div class="container stemwijzer-stelling">
                 <h1 id="stelling-titel" class="stelling-titel">Als je dit ziet, dan werkt het niet</h1>
                 <p id="stelling-text" class="stelling-txt">wow dit zuigt</p>
             </div>
             <div class="container stemwijzer-stelling stemwijzer-buttons">
-                <button id="button-eens" class="btn btn-dark btn-lg button-stelling">Eens</button>
-                <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb">Geen van beide</button>
-                <button id="button-oneens" class="btn btn-dark btn-lg button-stelling">Oneens</button>
-                <button id="button-skip-vraag" class="btn btn-light btn-lg button-stelling-skip">Sla deze vraag over</button>
+                <button id="button-eens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('pro'); nextStatement()">Eens</button>
+                <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb" onclick="answerStatement('none'); nextStatement()">Geen van beide</button>
+                <button id="button-oneens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('contra'); nextStatement()">Oneens</button>
+                <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip" onclick="nextStatement()">Sla deze vraag over</button>
             </div>
         </div>
     </div>
@@ -33,7 +33,8 @@
 
 
 
-
+    <script src="data.js"></script>
+    <script src="javascript.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

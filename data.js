@@ -14,7 +14,7 @@ var subjects = [{
         },
         {
             "name": "D66",
-            "position": "pro",
+            "position": "none",
             "opinion": "D66 wil de democratische controle moderniseren. Daarom wil D66 kiezers een noodrem geven met de mogelijkheid om via een correctief bindend referendum wetsvoorstellen tegen te houden, nadat het parlement deze heeft aangenomen. Dit correctief bindend referendum omvat geen internationale verdragen."
         },
         {
@@ -35,7 +35,7 @@ var subjects = [{
             },
             {
                 "name": "SP",
-                "position": "contra",
+                "position": "none",
                 "opinion": "De SP is voorstander van een maatschappelijke stage voor jongeren binnen het onderwijs om kennis te maken met de maatschappij, bijvoorbeeld in zorg of onderwijs. Een maatschappelijke dienstplicht voor langere tijd buiten het onderwijs gaat echter veel te ver, zal veel kosten en weinig opleveren. Belangrijke maatschappelijke taken moeten worden verricht door mensen die daar gemotiveerd en goed opgeleid voor zijn,"
             },
             {
@@ -92,7 +92,7 @@ var subjects = [{
             },
             {
                 "name": "D66",
-                "position": "contra",
+                "position": "none",
                 "opinion": "D66 is voor vrije meningsuiting maar vindt dat het opzettelijk beledigen, discrimineren en haat zaaien tegen mensen vanwege het behoren tot een bepaalde bevolkingsgroep, niet past in onze samenleving."
             },
             {
