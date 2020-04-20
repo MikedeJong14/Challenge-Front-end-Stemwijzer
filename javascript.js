@@ -48,14 +48,12 @@ function loadStatement() {
 function startStemwijzer() {
     statementNumber = 0;
     loadStatement();
-    for (let i = 0; i < parties.length; i++) {
-        parties[i].score = 0;
-    }
+    resetScore();
 }
 
 function nextStatement() {
     if (statementNumber === (subjects.length - 1)) {
-        window.location = "stemwijzer.html";
+        window.location = "resultaat.html";
     } else {
         statementNumber++;
         loadStatement();

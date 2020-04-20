@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stemwijzer</title>
+    <title>Resultaat</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="customStyle.css">
 </head>
-<body onload="startStemwijzer()">
+<body onload="">
     <div class="container main">
         <div class="container rounded stemwijzer-main">
-            <div class="stemwijzer-scherm">
-                <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
-                <div class="container stemwijzer-stelling">
-                    <h1 id="stelling-titel" class="stelling-titel">Als je dit ziet, dan werkt het niet</h1>
-                    <p id="stelling-text" class="stelling-txt">wow dit zuigt</p>
-                </div>
-                <div class="container stemwijzer-stelling stemwijzer-buttons">
-                    <button id="button-eens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('pro'); nextStatement()">Eens</button>
-                    <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb" onclick="answerStatement('none'); nextStatement()">Geen van beide</button>
-                    <button id="button-oneens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('contra'); nextStatement()">Oneens</button>
-                    <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip" onclick="nextStatement()">Sla deze vraag over</button>
-                </div>
+            <!-- <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button> -->
+            <div class="container stemwijzer-stelling">
+                <h1 id="stelling-titel" class="stelling-titel">Als je dit ziet, dan werkt het niet</h1>
+                <p id="stelling-text" class="stelling-txt">wow dit zuigt</p>
             </div>
-            <div class="resultaat-scherm">
-                <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
-                <p class="resultaat">bruh</p>
+            <div class="container stemwijzer-stelling stemwijzer-buttons">
+                <button id="button-eens" class="btn btn-dark btn-lg button-stelling" onclick="">Eens</button>
+                <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb" onclick="">Geen van beide</button>
+                <button id="button-oneens" class="btn btn-dark btn-lg button-stelling" onclick="">Oneens</button>
+                <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip" onclick="">Sla deze vraag over</button>
             </div>
         </div>
-
-
     </div>
 
     <footer class="container pt-4 footer">

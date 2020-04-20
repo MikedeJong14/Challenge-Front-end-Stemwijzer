@@ -19,6 +19,10 @@ body {
     margin-top: 100px;
 }
 
+.resultaat-scherm {
+
+}
+
 .stemwijzer-stelling {
     margin: 40px 10% 0 10%;
     padding: 0;
@@ -26,8 +30,8 @@ body {
     height: 320px;
 }
 
-.stemwijzer-buttons {
-
+.stemwijzer-scherm {
+    display: none;
 }
 
 .links {
