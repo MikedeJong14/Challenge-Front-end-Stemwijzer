@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="customStyle.css">
 </head>
 <body onload="startStemwijzer()">
-    <div class="container main">
+    <div class="container">
         <div class="container rounded stemwijzer-main">
-            <div class="stemwijzer-scherm">
+            <div id="stemwijzerScherm" class="">
                 <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
                 <div class="container stemwijzer-stelling">
                     <h1 id="stelling-titel" class="stelling-titel">Als je dit ziet, dan werkt het niet</h1>
-                    <p id="stelling-text" class="stelling-txt">wow dit zuigt</p>
+                    <p id="stelling-text" class="stelling-txt">copyright Mike de Jong lolol</p>
                 </div>
-                <div class="container stemwijzer-stelling stemwijzer-buttons">
+                <div class="container stemwijzer-buttons">
                     <button id="button-eens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('pro'); nextStatement()">Eens</button>
                     <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb" onclick="answerStatement('none'); nextStatement()">Geen van beide</button>
                     <button id="button-oneens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('contra'); nextStatement()">Oneens</button>
                     <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip" onclick="nextStatement()">Sla deze vraag over</button>
                 </div>
+                <div class="form-group stemwijzer-form">
+                    <label>Tel deze vraag extra mee</label>
+                    <div class="boxed">
+                        <input type="checkbox" id="check" disabled="disabled">
+                        <label for="check" id="checkLabel" onclick="checkImportant()">ja</label>
+                    </div>
+                </div>
             </div>
-            <div class="resultaat-scherm">
-                <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
-                <p class="resultaat">bruh</p>
+            <div id="resultaatScherm" class="invisible">
+                <button class="btn btn-dark btn-lg mt-3" onclick="home()">Terug naar Home</button>
+                <button class="btn btn-primary btn-lg mt-3" onclick="showResult()">Standaard weergave</button>
+                <button class="btn btn-secondary btn-lg mt-3" onclick="showResult('seculier')">Alleen seculiere partijen</button>
+                <button class="btn btn-secondary btn-lg mt-3" onclick="showResult('groot')">Alleen grote partijen</button>
+                <div id="results"></div>
             </div>
         </div>
 
