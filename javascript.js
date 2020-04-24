@@ -86,7 +86,7 @@ function startStemwijzer() {
     resetScore();
 
     //debug: alle antwoorden willekeurig invullen
-    for (let i = 0; i < subjects.length; i++) {
+/*    for (let i = 0; i < subjects.length; i++) {
         if (Math.random() <= 0.5) {
             answerArray[statementNumber]["answer"] = "pro";
         } else {
@@ -94,7 +94,7 @@ function startStemwijzer() {
         }
         answerArray[statementNumber]["extraWeight"] = Math.random() <= 0.2; //20% kans op true
         nextStatement();
-    }
+    }*/
 }
 
 function nextStatement() {
@@ -141,7 +141,7 @@ function newElement(type, appendTo) {
 function showResult(mode) {
     let resultScreen = document.getElementById("resultaatScherm");
     let stemwijzerScreen = document.getElementById("stemwijzerScherm");
-    let results = document.getElementById("results")
+    let results = document.getElementById("results");
     let percent = 100 / maxScore;
 
     resultScreen.classList.remove("invisible");
