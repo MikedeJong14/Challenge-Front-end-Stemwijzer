@@ -10,16 +10,18 @@
     <div class="container">
         <div class="container rounded stemwijzer-main">
             <div id="stemwijzerScherm" class="">
-                <button class="btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
+                <button class="stemwijzer-header btn btn-secondary btn-lg rounded-circle button-terug" onclick="previousStatement()"><-</button>
+                <h2 id="stemwijzer-header-text">1/30</h2>
+                <button class="stemwijzer-header btn btn-secondary btn-lg rounded-circle button-terug" onclick="nextStatement()">-></button>
                 <div class="container stemwijzer-stelling">
                     <h1 id="stelling-titel" class="stelling-titel">Als je dit ziet, dan werkt het niet</h1>
                     <p id="stelling-text" class="stelling-txt">copyright Mike de Jong</p>
                 </div>
                 <div class="container stemwijzer-buttons">
-                    <button id="button-eens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('pro'); nextStatement()">Eens</button>
-                    <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb" onclick="answerStatement('none'); nextStatement()">Geen van beide</button>
-                    <button id="button-oneens" class="btn btn-dark btn-lg button-stelling" onclick="answerStatement('contra'); nextStatement()">Oneens</button>
-                    <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip" onclick="nextStatement()">Sla deze vraag over</button>
+                    <button id="button-eens" class="btn btn-dark btn-lg button-stelling answer-btn" onclick="answerStatement('pro'); nextStatement()">Eens</button>
+                    <button id="button-gvb" class="btn btn-dark btn-lg button-stelling-gvb answer-btn" onclick="answerStatement('none'); nextStatement()">Geen van beide</button>
+                    <button id="button-oneens" class="btn btn-dark btn-lg button-stelling answer-btn" onclick="answerStatement('contra'); nextStatement()">Oneens</button>
+                    <button id="button-skip" class="btn btn-light btn-lg button-stelling-skip answer-btn" onclick="answerStatement(''); nextStatement()">Sla deze vraag over</button>
                 </div>
                 <div class="form-group stemwijzer-form">
                     <label>Tel deze vraag extra mee</label>

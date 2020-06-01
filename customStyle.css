@@ -63,6 +63,16 @@ body {
     left: 0;
 }
 
+.stemwijzer-header {
+    display: inline-block;
+}
+
+#stemwijzer-header-text {
+    display: inline-block;
+    min-width: calc(100% - 130px);
+    text-align: center;
+}
+
 .stemwijzer-stelling {
     margin: 40px 10% 0 10%;
     padding: 0;
@@ -143,9 +153,22 @@ body {
     width: 60px;
     height: 60px;
     font-size: 30px;
-    line-height: 36px;
+    line-height: 35px;
     margin-top: 15px;
-    padding-left: 12px;
+    padding: 0;
+}
+
+.button-stelling-skip.answered {
+    color: #ffffff;
+}
+
+.answered {
+    background-color: #01B4DC;
+    border-color: #0192b9;
+}
+
+.answered:hover {
+    background-color: #0192b9;
 }
 
 .stelling-txt {

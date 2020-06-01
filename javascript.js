@@ -92,23 +92,55 @@ function resetScore() {
 // Display the title and text of a statement
 function loadStatement() {
 
+    let headerNumber = document.getElementById("stemwijzer-header-text");
     let statementTitleHtml = document.getElementById("stelling-titel");
     let statementTextHtml = document.getElementById("stelling-text");
 
     // The current statement is determined by the global variable 'statementNumber'
     let currentStatement = subjects[statementNumber];
 
+    headerNumber.innerHTML = (statementNumber + 1) + "/" + subjects.length;
     statementTitleHtml.innerHTML = currentStatement.title;
     statementTextHtml.innerHTML = currentStatement.statement;
 
-    // Checks if user has already specified added weight to a question
+    // Check if user has already specified added weight to a question
     let weight = answerArray[statementNumber]["extraWeight"];
 
-    // typeof "undefined" describes if the 'extraWeight' property doesnt exist yet
+    // 'typeof "undefined"' describes if the 'extraWeight' property doesnt exist yet
     if (typeof weight === "undefined" || weight === false) {
         uncheckImportant();
     } else if (weight === true) {
         checkImportant();
+    }
+
+    // Put this question's answer in a variable
+    let answer = answerArray[statementNumber]["answer"];
+
+    // Get the 4 answer buttons from the stemwijzer screen
+    let buttons = document.getElementsByClassName("answer-btn");
+
+    // for each button
+    for (let i = 0; i < buttons.length; i++) {
+        //if button has the "answered" class from the previous question, remove it
+        if (buttons[i].classList.contains("answered")) {
+            buttons[i].classList.remove("answered");
+        }
+    }
+
+    // Check if user has already answered this question and lights up a button
+    switch (answer) {
+        case 'pro':
+            buttons[0].classList.add("answered");
+            break;
+        case 'none':
+            buttons[1].classList.add("answered");
+            break;
+        case 'contra':
+            buttons[2].classList.add("answered");
+            break;
+        case '':
+            buttons[3].classList.add("answered");
+            break;
     }
 
     console.log(statementNumber);
